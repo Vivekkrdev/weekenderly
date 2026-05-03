@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weekenderly – Meet New People & Discover Weekend Plans in Your City</title>
+  <meta name="description" content="Looking for weekend plans or new friends? Weekenderly helps working professionals meet people, explore events, and make their weekends exciting."/>
+  <meta name="keywords" content="meet new people, weekend plans, social app India, things to do weekend, meetups near me, weekend activities for professionals, networking events Bengaluru, Mumbai, Delhi"/>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="home.css"/>
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Weekenderly",
+    "url": "https://weekenderly.com",
+    "logo": "https://weekenderly.com/logo.png",
+    "description": "A social platform for corporate professionals to meet new people and explore weekend experiences.",
+    "sameAs": [
+      "https://instagram.com/weekenderly"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://weekenderly.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://weekenderly.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
+<body>
+<!-- ── Grainy Texture ── -->
+<div class="grain-overlay"></div>
+
+<!-- ── Loading Screen ── -->
+<div id="loader">
+  <div id="loader-logo">
+    <div class="loader-logo-wrap" style="background:white; border-radius:50%; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,0.2);">
+      <img src="logo.png" alt="Weekenderly Loading Logo" style="height:120px;">
+    </div>
+  </div>
+  <div id="loader-bar"><div id="loader-bar-fill"></div></div>
+</div>
+
+<!-- ── Scroll Progress ── -->
+<div id="scroll-progress"></div>
+
+<!-- ── Custom Cursor ── -->
+<div id="cursor"></div>
+<div id="cursor-dot"></div>
+
+<!-- ── Navbar ── -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Weekenderly home">
+        <img src="logo.png" alt="Weekenderly Logo" class="logo-color">
+        <img src="logo_white.png" alt="Weekenderly Logo" class="logo-white">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="partnership.html">Partner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="join.html" class="btn btn-primary nav-cta">Join Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a><a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a><a href="partnership.html">Partner</a>
+  <a href="contact.html">Contact</a>
+  <a href="join.html" class="btn btn-primary">Join Now</a>
+</div>
+
+<main>
+
+
+<!-- ══ HERO — Video Background ══ -->
+<section class="hero" id="hero">
+  <div class="hero-video-wrap">
+    <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=80&auto=format&fit=crop">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-celebrating-a-birthday-4027-large.mp4" type="video/mp4"/>
+      <div class="hero-bg-img"></div>
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-float-cards" aria-hidden="true">
+    <div class="float-card float-card-1"><div class="float-icon">☕</div><div><div style="font-weight:700">Café Meetup</div><div style="opacity:.75;font-size:.75rem">Saturday 10 AM · 6 joining</div></div></div>
+    <div class="float-card float-card-2"><div class="float-icon">🏔️</div><div><div style="font-weight:700">Weekend Trek</div><div style="opacity:.75;font-size:.75rem">12 people confirmed</div></div></div>
+    <div class="float-card float-card-3"><div class="float-icon">🎶</div><div><div style="font-weight:700">Live Music Night</div><div style="opacity:.75;font-size:.75rem">8 spots left</div></div></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow"><div class="hero-dot"></div>Social Platform for Professionals</div>
+    <h1>Meet New People & Make Your <span class="gradient-text">Weekends Count</span></h1>
+    <p class="hero-sub">The #1 community for weekend plans in Bengaluru, Mumbai, Delhi, and beyond.</p>
+    <div class="hero-actions">
+      <a href="http://bit.ly/4tbn3bK" target="_blank" rel="noopener" class="btn btn-primary btn-lg" id="hero-cta">Find Weekend Plans Near You &rarr;</a>
+      <a href="#problem" class="btn btn-secondary btn-lg">Explore Events in Your City</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>Scroll</div>
+</section>
+
+<!-- ══ STATS BELT ══ -->
+<div class="stats-belt">
+  <div class="container">
+    <div class="stats-belt-inner">
+      <div class="belt-stat reveal">
+        <div class="belt-stat-num"><span class="stat-number" data-target="500" data-suffix="+">500+</span></div>
+        <div class="belt-stat-label">Early Members</div>
+      </div>
+      <div class="belt-stat reveal">
+        <div class="belt-stat-num"><span class="stat-number" data-target="12" data-suffix="+">12+</span></div>
+        <div class="belt-stat-label">Cities Active</div>
+      </div>
+      <div class="belt-stat reveal">
+        <div class="belt-stat-num"><span class="stat-number" data-target="98" data-suffix="%">98%</span></div>
+        <div class="belt-stat-label">Satisfaction Rate</div>
+      </div>
+      <div class="belt-stat reveal">
+        <div class="belt-stat-num"><span class="stat-number" data-target="200" data-suffix="+">200+</span></div>
+        <div class="belt-stat-label">Weekend Events</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PROBLEM ══ -->
+<section class="problem-section section-padding" id="problem">
+  <div class="container">
+    <div class="two-col">
+      <div class="section-text reveal-left">
+        <span class="section-label">Tired of Boring Weekends?</span>
+        <h2 class="word-reveal">Same job. Same city. Same boring weekends.</h2>
+        <p class="lead word-reveal">If you're looking for things to do on weekends or want to find friends in your city, you're in the right place.</p>
+        <p class="word-reveal">Weekenderly is designed for working professionals who want to skip the scroll and start living. Whether it's weekend activities in Bengaluru or networking events in Mumbai, we've got you covered.</p>
+        <div class="problem-tags" style="margin-top:24px;">
+          <span class="tag tag-muted reveal" data-delay="0">😴 No plans again</span>
+          <span class="tag tag-muted reveal" data-delay="100">📱 Doom scrolling</span>
+          <span class="tag tag-muted reveal" data-delay="200">🔄 Same routine</span>
+          <span class="tag tag-muted reveal" data-delay="300">🙁 Wasted weekends</span>
+        </div>
+      </div>
+      <div class="section-image img-reveal reveal-right">
+        <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&q=85&auto=format&fit=crop" alt="Working professional looking at phone feeling bored" loading="lazy"/>
+        <div class="img-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOLUTION ══ -->
+<section class="solution-section section-padding" id="solution">
+  <div class="container">
+    <div class="two-col reverse">
+      <div class="section-image solution-image img-reveal reveal-left">
+        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&q=85&auto=format&fit=crop" alt="Diverse group of friends laughing together at a social event" loading="lazy"/>
+        <div class="img-overlay" style="background:linear-gradient(rgba(255,122,0,0.04),rgba(11,31,58,0.1))"></div>
+      </div>
+      <div class="section-text reveal-right">
+        <span class="section-label">Discover Things to Do Near You</span>
+        <h2 class="word-reveal">Weekend Plans & Social Meetups in <span class="gradient-text">Your City.</span></h2>
+        <p>A curated community helping you meet new people in Bengaluru, Mumbai, Delhi, and Chennai. Real plans. Real people. Real memories.</p>
+        <div class="solution-list">
+          <div class="solution-item reveal" data-delay="0"><div class="solution-icon">👥</div><span>Meet like-minded people who share your vibe</span></div>
+          <div class="solution-item reveal" data-delay="100"><div class="solution-icon">📅</div><span>Discover real plans — cafés, trips, events & more</span></div>
+          <div class="solution-item reveal" data-delay="200"><div class="solution-icon">✨</div><span>Build meaningful connections that last</span></div>
+        </div>
+        <div style="margin-top:36px;"><a href="join.html" class="btn btn-primary" id="solution-cta">Get Started Free</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="how-section section-padding" id="how-it-works">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">How Weekenderly Works</span>
+      <h2 class="text-white" style="margin-top:8px;">Three steps to a social weekend.</h2>
+      <p style="color:rgba(255,255,255,.6);max-width:480px;margin:16px auto 0;">Three steps to a weekend you'll actually remember.</p>
+    </div>
+    <div class="how-cards">
+      <div class="how-card reveal" data-delay="0"><div class="how-number">01</div><div class="how-emoji">🚀</div><h3>Join</h3><p>Sign up free. Tell us your weekend vibe — cafés, treks, nightlife, culture.</p></div>
+      <div class="how-card reveal" data-delay="150"><div class="how-number">02</div><div class="how-emoji">🤝</div><h3>Connect</h3><p>Get matched with like-minded professionals in your city.</p></div>
+      <div class="how-card reveal" data-delay="300"><div class="how-number">03</div><div class="how-emoji">🌟</div><h3>Go Out</h3><p>Join curated plans. Show up, meet your people, make memories.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EXPERIENCE — Horizontal Pinned (desktop) ══ -->
+<section class="experience-horizontal" id="experience">
+  <div class="experience-header reveal">
+    <span class="section-label">Weekend Activities for Professionals</span>
+    <h2>Join People Exploring Weekends Like You</h2>
+  </div>
+  <div class="exp-track">
+    <div class="exp-panel">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=85&auto=format&fit=crop" alt="Beautiful warm café interior with people" loading="lazy"/>
+      <div class="exp-panel-overlay"></div>
+      <div class="exp-panel-label"><span class="exp-panel-tag">☕ Café</span><h4>Morning Brews</h4><p>Great coffee and even better conversations.</p></div>
+    </div>
+    <div class="exp-panel">
+      <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=900&q=85&auto=format&fit=crop" alt="Group hiking through scenic mountain trail" loading="lazy"/>
+      <div class="exp-panel-overlay"></div>
+      <div class="exp-panel-label"><span class="exp-panel-tag">🏔️ Trek</span><h4>Mountain Escapes</h4><p>Escape the city with a crew ready for adventure.</p></div>
+    </div>
+    <div class="exp-panel">
+      <img src="https://images.unsplash.com/photo-1540039155733-5bb30b4e61de?w=900&q=85&auto=format&fit=crop" alt="Electric concert crowd at night" loading="lazy"/>
+      <div class="exp-panel-overlay"></div>
+      <div class="exp-panel-label"><span class="exp-panel-tag">🎶 Live Music</span><h4>Nights to Remember</h4><p>Music, energy, and the city at its most alive.</p></div>
+    </div>
+    <div class="exp-panel">
+      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=85&auto=format&fit=crop" alt="Friends hanging out on a rooftop" loading="lazy"/>
+      <div class="exp-panel-overlay"></div>
+      <div class="exp-panel-label"><span class="exp-panel-tag">👫 Social</span><h4>Rooftop Hangs</h4><p>The best views and even better company.</p></div>
+    </div>
+    <div class="exp-panel">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=85&auto=format&fit=crop" alt="Tropical beach weekend getaway" loading="lazy"/>
+      <div class="exp-panel-overlay"></div>
+      <div class="exp-panel-label"><span class="exp-panel-tag">🌊 Travel</span><h4>Weekend Getaways</h4><p>Stretch those 48 hours into a lifetime of memories.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VIDEO FEATURE ══ -->
+<section class="video-feature" id="why-weekenderly">
+  <div class="container">
+    <div class="video-feature-inner">
+      <div class="video-container reveal-left">
+        <video class="section-video" muted loop playsinline poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-friends-laughing-at-a-barbecue-4028-large.mp4" type="video/mp4"/>
+        </video>
+        <div class="play-indicator"><div class="play-dot"></div> Live Community</div>
+      </div>
+      <div class="video-text reveal-right">
+        <span class="section-label">Real Impact</span>
+        <h2>Not just an app.<br><span class="gradient-text">A community.</span></h2>
+        <p>Weekenderly is built on the belief that your social life deserves the same intentionality as your career. We make that effortless.</p>
+        <div class="video-quote">
+          <p>"Went on a trek with 8 strangers last Saturday. Left with 8 new friends. That's Weekenderly."</p>
+          <div style="margin-top:12px;font-family:'Poppins',sans-serif;font-weight:600;font-size:0.85rem;color:var(--orange);">— Priya K., Product Manager, Delhi</div>
+        </div>
+        <div style="margin-top:28px;"><a href="http://bit.ly/4tbn3bK" target="_blank" rel="noopener" class="btn btn-primary" id="video-cta">Join the Community &rarr;</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COMMUNITY ══ -->
+<section class="community-section section-padding" id="community">
+  <div class="container">
+    <div class="community-inner">
+      <div class="community-image reveal-left">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=85&auto=format&fit=crop" alt="Diverse group of friends" loading="lazy"/>
+        <div class="community-badges" aria-hidden="true">
+          <div class="badge"><div class="badge-dot"></div><span>Priya joined a trek 🏔️</span></div>
+          <div class="badge"><div class="badge-dot"></div><span>8 going to Café Social ☕</span></div>
+          <div class="badge"><div class="badge-dot"></div><span>Bangalore chapter live 🎉</span></div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <span class="section-label">Real Community</span>
+        <h2 class="reveal-text">Not users.<br>Real people.</h2>
+        <p style="margin-top:16px;">Join early members already building better weekends — ambitious, social professionals tired of the same old routine.</p>
+        <div class="stat-row">
+          <div class="stat-item"><div class="stat-number" data-target="500" data-suffix="+">500+</div><div class="stat-label">Members</div></div>
+          <div class="stat-item"><div class="stat-number" data-target="12" data-suffix="">12</div><div class="stat-label">Cities</div></div>
+          <div class="stat-item"><div class="stat-number" data-target="98" data-suffix="%">98%</div><div class="stat-label">Love It</div></div>
+        </div>
+        <div style="margin-top:36px;"><a href="http://bit.ly/4tbn3bK" target="_blank" rel="noopener" class="btn btn-primary" id="community-cta">Join the Community</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SEO CONTENT / BLOG PREVIEW ══ -->
+<section class="section-padding" style="background:var(--white);" id="blog">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Weekend Insights</span>
+      <h2>Social Meetup Tips & Local Guides</h2>
+      <p style="max-width:500px;margin:16px auto 0;">Explore the best things to do on weekends and how to build a social circle in your city.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:32px;margin-top:52px;">
+      <div class="card reveal" data-delay="0">
+        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&q=80" alt="Friends enjoying weekend cafe meetup in Bengaluru" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
+        <h3 style="font-size:1.25rem;margin-bottom:12px;">Top 10 Things to Do on Weekends in Bengaluru</h3>
+        <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:16px;">From hidden rooftop cafés to early morning treks, discover why Bengaluru is the best city for weekend lovers.</p>
+        <a href="#" style="color:var(--orange);font-weight:600;font-size:0.9rem;">Read Guide &rarr;</a>
+      </div>
+      <div class="card reveal" data-delay="100">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Group of people networking at social event in Mumbai" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
+        <h3 style="font-size:1.25rem;margin-bottom:12px;">How to Meet New People in a New City</h3>
+        <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:16px;">Moving to Mumbai or Delhi for work? Here’s your ultimate guide to finding your tribe and making friends.</p>
+        <a href="#" style="color:var(--orange);font-weight:600;font-size:0.9rem;">Read More &rarr;</a>
+      </div>
+      <div class="card reveal" data-delay="200">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Young professionals on weekend trip near Delhi" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-bottom:20px;">
+        <h3 style="font-size:1.25rem;margin-bottom:12px;">Best Weekend Getaways Near You</h3>
+        <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:16px;">Short on time? These quick getaways from your city are perfect for a 48-hour social reset.</p>
+        <a href="#" style="color:var(--orange);font-weight:600;font-size:0.9rem;">See Getaways &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA ══ -->
+<section class="cta-section" id="join-now">
+  <div class="cta-bg">
+    <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1920&q=80">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-friends-with-colored-smoke-bombs-4556-large.mp4" type="video/mp4"/>
+      <div class="cta-bg-img"></div>
+    </video>
+  </div>
+  <div class="cta-overlay"></div>
+  <div class="container">
+    <div class="cta-content reveal">
+      <span class="section-label" style="color:rgba(255,255,255,.65);">The Clock Is Ticking</span>
+      <h2>Don't waste<br>another weekend.</h2>
+      <p>Join hundreds of professionals already living better. It only takes 60 seconds.</p>
+      <a href="http://bit.ly/4tbn3bK" target="_blank" rel="noopener" class="btn btn-primary btn-lg" id="final-cta">Join Now — It's Free &rarr;</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="logo.png" alt="Weekenderly Logo">
+          <span>Weekend<span>erly</span></span>
+        </div>
+        <p>Redefining how working professionals experience life outside of work.</p>
+        <div class="social-links" style="margin-top:20px;">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="contact.html" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Explore</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="join.html">Join</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="partnership.html">Partnership</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div>
+      <div class="footer-col"><h5>Connect</h5><a href="https://instagram.com" target="_blank">Instagram</a><a href="contact.html">WhatsApp</a><a href="contact.html">Email Us</a><a href="join.html">Early Access</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Weekenderly. All rights reserved. Built with ❤️ for better weekends.</p>
+      <p><a href="privacy.html" style="color:rgba(255,255,255,.4);margin-right:16px;">Privacy</a><a href="disclaimer.html" style="color:rgba(255,255,255,.4)">Disclaimer</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

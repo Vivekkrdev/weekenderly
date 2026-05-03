@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekenderly � Your Social Weekend Platform</title>
+  <meta name="keywords" content="meet new people, weekend plans, social app India, things to do weekend, meetups near me">
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="description" content="Weekenderly's privacy policy. We collect minimal user data for community access and communication. No data is sold or misused." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- Lenis -->
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
+<body>
+<!-- -- Loading Screen -- -->
+<div id="loader">
+  <div id="loader-logo"><img src="logo_white.png" style="height:80px;"></div>
+  <div id="loader-bar"><div id="loader-bar-fill"></div></div>
+</div>
+
+<!-- -- Scroll Progress -- -->
+<div id="scroll-progress"></div>
+
+<!-- -- Custom Cursor -- -->
+<div id="cursor"></div>
+<div id="cursor-dot"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+              <a href="index.html" class="nav-logo" aria-label="Weekenderly home">
+        <img src="logo.png" alt="Weekenderly Logo">
+        <span>Weekend<span>erly</span></span>
+      </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="partnership.html">Partner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="join.html" class="btn btn-primary nav-cta">Join Now</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="partnership.html">Partner</a>
+    <a href="contact.html">Contact</a>
+    <a href="join.html" class="btn btn-primary">Join Now</a>
+  </div>
+
+  <!-- ══ FULL-SCREEN HERO ══ -->
+  <section class="page-hero" aria-label="Privacy Policy hero">
+    <div class="page-hero-bg" id="page-hero-bg"
+         style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1920&q=85&auto=format&fit=crop');"
+         aria-hidden="true"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+
+    <div class="page-hero-content">
+      <span class="section-label">Legal</span>
+      <h1>Privacy <span class="gradient-text">Policy.</span></h1>
+      <p>Last updated: January 2024. We keep things simple and completely transparent.</p>
+      <div class="page-hero-actions">
+        <a href="#privacy-content" class="btn btn-primary btn-lg" id="privacy-read-cta">
+          Read Policy &darr;
+        </a>
+        <a href="contact.html" class="btn btn-secondary btn-lg">
+          Questions? Contact Us
+        </a>
+      </div>
+    </div>
+
+    <div class="page-hero-scroll" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+      Scroll
+    </div>
+  </section>
+
+  <main>
+    <section class="section-padding" style="background:var(--white);" id="privacy-content" aria-label="Privacy policy content">
+      <div class="container">
+        <div class="legal-content">
+
+          <div class="legal-section">
+            <h3>1. Overview</h3>
+            <p>At Weekenderly, your privacy matters to us. This Privacy Policy explains how we collect, use, and protect your personal information when you use our platform and services. We are committed to handling your data with the highest standards of transparency and responsibility.</p>
+            <p style="margin-top:12px;">By accessing or using Weekenderly, you agree to the terms outlined in this policy.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>2. Information We Collect</h3>
+            <p>We collect minimal user data necessary to provide our community service. This may include:</p>
+            <ul style="margin-top:12px;padding-left:20px;display:flex;flex-direction:column;gap:8px;">
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;"><strong style="color:var(--navy);">Name:</strong> To personalise your experience and facilitate introductions within the community.</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;"><strong style="color:var(--navy);">Contact Information:</strong> Email address and/or phone number for community access, invitations, and communication.</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;"><strong style="color:var(--navy);">City/Location:</strong> To match you with relevant local weekend experiences.</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;"><strong style="color:var(--navy);">Preferences:</strong> Your weekend interests (e.g., cafés, treks, events) to provide curated recommendations.</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>3. How We Use Your Information</h3>
+            <p>Your data is used exclusively for:</p>
+            <ul style="margin-top:12px;padding-left:20px;display:flex;flex-direction:column;gap:8px;">
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Granting and managing your community access</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Sending you curated weekend experience invitations</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Matching you with like-minded members in your city</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Communicating updates, new features, and important announcements</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Improving our platform and services based on usage patterns</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>4. Data Sharing</h3>
+            <p><strong style="color:var(--navy);">We do not sell, rent, or trade your personal data to any third party.</strong> Your information is never shared for advertising or commercial purposes without your explicit consent.</p>
+            <p style="margin-top:12px;">We may share limited, anonymised data with trusted service providers (e.g., communication platforms) solely to facilitate community operations.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>5. Data Security</h3>
+            <p>We implement appropriate technical and organisational measures to protect your personal data from unauthorised access, alteration, disclosure, or destruction. Your data is stored securely and access is restricted to authorised personnel only.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>6. Your Rights</h3>
+            <p>You have the right to:</p>
+            <ul style="margin-top:12px;padding-left:20px;display:flex;flex-direction:column;gap:8px;">
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Access the personal data we hold about you</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Request correction of inaccurate data</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Request deletion of your data at any time</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Opt out of community communications</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Withdraw your consent to data processing</li>
+            </ul>
+            <p style="margin-top:12px;">To exercise any of these rights, contact us at <a href="mailto:hello@weekenderly.com" style="color:var(--orange);font-weight:500;">hello@weekenderly.com</a>.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>7. Cookies</h3>
+            <p>Our website may use cookies to enhance your browsing experience. These are small files stored on your device that help us remember your preferences. You can disable cookies through your browser settings, though this may affect certain functionality.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>8. Changes to This Policy</h3>
+            <p>We reserve the right to update this Privacy Policy periodically. Any changes will be communicated via email or a prominent notice on our website. Continued use of our services after changes constitutes acceptance of the updated policy.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>9. Contact Us</h3>
+            <p>For any privacy-related questions or concerns, please reach out to us:</p>
+            <div style="margin-top:16px;padding:20px;background:var(--off-white);border-radius:var(--radius-md);border-left:4px solid var(--orange);">
+              <p><strong style="color:var(--navy);">Email:</strong> <a href="mailto:hello@weekenderly.com" style="color:var(--orange);">hello@weekenderly.com</a></p>
+              <p style="margin-top:8px;"><strong style="color:var(--navy);">Instagram:</strong> <a href="https://instagram.com/weekenderly" target="_blank" rel="noopener" style="color:var(--orange);">@weekenderly</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+                  <div class="footer-logo">
+          <img src="logo.png" alt="Weekenderly Logo">
+          <span>Weekend<span>erly</span></span>
+        </div>
+          <p>Redefining how working professionals experience life outside of work.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="join.html">Join</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="partnership.html">Partnership</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="contact.html">WhatsApp</a>
+          <a href="contact.html">Email Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Weekenderly. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

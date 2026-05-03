@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Weekenderly � Meet New People & Make Weekend Plans</title>
+  <meta name="keywords" content="meet new people, weekend plans, social app India, things to do weekend, meetups near me">
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="description" content="Join Weekenderly's early access and start making your weekends count. Meet real people, discover real plans, build meaningful connections." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- Lenis -->
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
+<body>
+<!-- -- Loading Screen -- -->
+<div id="loader">
+  <div id="loader-logo"><img src="logo_white.png" style="height:80px;"></div>
+  <div id="loader-bar"><div id="loader-bar-fill"></div></div>
+</div>
+
+<!-- -- Scroll Progress -- -->
+<div id="scroll-progress"></div>
+
+<!-- -- Custom Cursor -- -->
+<div id="cursor"></div>
+<div id="cursor-dot"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+              <a href="index.html" class="nav-logo" aria-label="Weekenderly home">
+        <img src="logo.png" alt="Weekenderly Logo">
+        <span>Weekend<span>erly</span></span>
+      </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="partnership.html">Partner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="join.html" class="btn btn-primary nav-cta">Join Now</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="partnership.html">Partner</a>
+    <a href="contact.html">Contact</a>
+    <a href="join.html" class="btn btn-primary">Join Now</a>
+  </div>
+
+  <!-- ══ FULL-SCREEN HERO ══ -->
+  <section class="page-hero" aria-label="Join Weekenderly hero">
+    <div class="page-hero-bg" id="page-hero-bg"
+         style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=85&auto=format&fit=crop');"
+         aria-hidden="true"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+
+    <div class="page-hero-content reveal">
+      <span class="section-label">Early Access Open</span>
+      <h1>Start living your<br>best <span class="gradient-text">weekends.</span></h1>
+      <p>Don't waste another Sunday wondering where the weekend went. Join a community that makes plans happen — real plans, real people.</p>
+      <div class="page-hero-actions">
+        <a href="http://bit.ly/4tbn3bK" target="_blank" rel="noopener" class="btn btn-primary btn-lg" id="join-hero-cta">
+          Claim Your Free Spot &rarr;
+        </a>
+        <a href="#benefits" class="btn btn-secondary btn-lg">
+          See the Benefits
+        </a>
+      </div>
+      <p style="color:rgba(255,255,255,0.4);font-size:0.82rem;margin-top:18px;">No credit card. No commitment. Just better weekends.</p>
+    </div>
+
+    <div class="page-hero-scroll" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+      Scroll
+    </div>
+  </section>
+
+  <main>
+
+    <!-- Benefits -->
+    <section class="join-benefits section-padding" id="benefits" aria-label="Benefits of joining">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">Why Join</span>
+          <h2 style="margin-top:8px;">Everything you've been missing.</h2>
+          <p style="max-width:500px;margin:16px auto 0;">Weekenderly is built for professionals who want more from their time off.</p>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-card reveal" data-delay="0">
+            <div class="benefit-icon">👥</div>
+            <h3>Meet Real People</h3>
+            <p>Connect with vetted, like-minded professionals in your city who are just as excited to make plans as you are.</p>
+          </div>
+          <div class="benefit-card reveal" data-delay="150">
+            <div class="benefit-icon">📅</div>
+            <h3>Discover Real Plans</h3>
+            <p>From café meetups to weekend treks — curated experiences that are actually worth showing up for.</p>
+          </div>
+          <div class="benefit-card reveal" data-delay="300">
+            <div class="benefit-icon">🔗</div>
+            <h3>Build Connections</h3>
+            <p>Move beyond surface-level networking. Build friendships that extend far beyond one weekend event.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Steps -->
+    <section class="section-padding" style="background:var(--white);" aria-label="How joining works">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">The Process</span>
+          <h2 style="margin-top:8px;">Joining is effortless.</h2>
+        </div>
+        <div style="max-width:700px;margin:52px auto 0;">
+          <div class="reveal" style="display:flex;gap:28px;align-items:flex-start;padding-bottom:40px;border-left:2px solid var(--orange);padding-left:36px;position:relative;margin-left:16px;">
+            <div style="position:absolute;left:-13px;top:0;width:26px;height:26px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.8rem;">1</div>
+            <div>
+              <h3 style="color:var(--navy);margin-bottom:8px;">Sign Up</h3>
+              <p>Click the button below and fill in your basic details. Takes less than 60 seconds.</p>
+            </div>
+          </div>
+          <div class="reveal" style="display:flex;gap:28px;align-items:flex-start;padding-bottom:40px;border-left:2px solid var(--orange);padding-left:36px;position:relative;margin-left:16px;">
+            <div style="position:absolute;left:-13px;top:0;width:26px;height:26px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.8rem;">2</div>
+            <div>
+              <h3 style="color:var(--navy);margin-bottom:8px;">We Match You</h3>
+              <p>Our team reviews your profile and connects you with the right community in your city.</p>
+            </div>
+          </div>
+          <div class="reveal" style="display:flex;gap:28px;align-items:flex-start;padding-bottom:40px;border-left:2px dashed rgba(11,31,58,0.15);padding-left:36px;position:relative;margin-left:16px;">
+            <div style="position:absolute;left:-13px;top:0;width:26px;height:26px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.8rem;">3</div>
+            <div>
+              <h3 style="color:var(--navy);margin-bottom:8px;">Start Your Weekend</h3>
+              <p>Receive your first invite, show up, and let Weekenderly do the rest. That's it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding" style="background:var(--off-white);" aria-label="Community testimonials">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">Real People. Real Weekends.</span>
+          <h2 style="margin-top:8px;">Early members love it.</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;" class="testimonial-grid">
+          <div class="card reveal" data-delay="0">
+            <div style="font-size:1.5rem;margin-bottom:14px;">⭐⭐⭐⭐⭐</div>
+            <p style="font-style:italic;color:var(--text-dark);font-size:0.95rem;">"I've been in this city for 3 years and never had a proper friend group. Weekenderly changed that in one month."</p>
+            <div style="margin-top:16px;display:flex;align-items:center;gap:10px;">
+              <div style="width:40px;height:40px;background:linear-gradient(135deg,var(--orange),#FF9A3C);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:white;">A</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;color:var(--navy);">Ananya S.</div>
+                <div style="font-size:0.8rem;color:var(--text-muted);">Software Engineer, Bangalore</div>
+              </div>
+            </div>
+          </div>
+          <div class="card reveal" data-delay="150">
+            <div style="font-size:1.5rem;margin-bottom:14px;">⭐⭐⭐⭐⭐</div>
+            <p style="font-style:italic;color:var(--text-dark);font-size:0.95rem;">"Finally, an app that gets it. No swiping. No awkwardness. Just people who actually show up."</p>
+            <div style="margin-top:16px;display:flex;align-items:center;gap:10px;">
+              <div style="width:40px;height:40px;background:linear-gradient(135deg,var(--navy),#1a3a6b);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:white;">R</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;color:var(--navy);">Rahul M.</div>
+                <div style="font-size:0.8rem;color:var(--text-muted);">Marketing Lead, Mumbai</div>
+              </div>
+            </div>
+          </div>
+          <div class="card reveal" data-delay="300">
+            <div style="font-size:1.5rem;margin-bottom:14px;">⭐⭐⭐⭐⭐</div>
+            <p style="font-style:italic;color:var(--text-dark);font-size:0.95rem;">"Went on a trek with 8 strangers last Saturday. Left with 8 new friends. That's Weekenderly."</p>
+            <div style="margin-top:16px;display:flex;align-items:center;gap:10px;">
+              <div style="width:40px;height:40px;background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:white;">P</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;color:var(--navy);">Priya K.</div>
+                <div style="font-size:0.8rem;color:var(--text-muted);">Product Manager, Delhi</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section-padding" style="background:var(--navy);text-align:center;position:relative;overflow:hidden;" aria-label="Final join CTA">
+      <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=60') center/cover;opacity:0.08;pointer-events:none;"></div>
+      <div class="container" style="position:relative;z-index:2;">
+        <div class="reveal">
+          <span class="section-label" style="color:rgba(255,255,255,0.6);">Don't Wait</span>
+          <h2 style="color:var(--white);margin:12px 0 16px;">Your best weekends are one click away.</h2>
+          <p style="color:rgba(255,255,255,0.7);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">Limited early access spots available. Join now and be part of the founding community.</p>
+          <a href="http://bit.ly/4tbn3bK" target="_blank" rel="noopener" class="btn btn-primary btn-lg" id="join-final-cta">
+            Claim Your Spot — Free &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+                  <div class="footer-logo">
+          <img src="logo.png" alt="Weekenderly Logo">
+          <span>Weekend<span>erly</span></span>
+        </div>
+          <p>Redefining how working professionals experience life outside of work.</p>
+        </div>
+        <div class="footer-col"><h5>Explore</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="join.html">Join</a></div>
+        <div class="footer-col"><h5>Company</h5><a href="partnership.html">Partnership</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div>
+        <div class="footer-col"><h5>Connect</h5><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a><a href="contact.html">WhatsApp</a><a href="contact.html">Email Us</a></div>
+      </div>
+      <div class="footer-bottom"><p>© 2024 Weekenderly. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <style>
+    @media (max-width: 768px) {
+      .testimonial-grid { grid-template-columns: 1fr !important; }
+      .benefits-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</body>
+</html>

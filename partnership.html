@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partner with Weekenderly � Reach Active Professionals</title>
+  <meta name="keywords" content="meet new people, weekend plans, social app India, things to do weekend, meetups near me">
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="description" content="Partner with Weekenderly to reach active weekend explorers. Ideal for cafés, event organizers, and travel groups." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- Lenis -->
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
+<body>
+<!-- -- Loading Screen -- -->
+<div id="loader">
+  <div id="loader-logo"><img src="logo_white.png" style="height:80px;"></div>
+  <div id="loader-bar"><div id="loader-bar-fill"></div></div>
+</div>
+
+<!-- -- Scroll Progress -- -->
+<div id="scroll-progress"></div>
+
+<!-- -- Custom Cursor -- -->
+<div id="cursor"></div>
+<div id="cursor-dot"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+              <a href="index.html" class="nav-logo" aria-label="Weekenderly home">
+        <img src="logo.png" alt="Weekenderly Logo">
+        <span>Weekend<span>erly</span></span>
+      </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="partnership.html">Partner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="join.html" class="btn btn-primary nav-cta">Join Now</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="partnership.html">Partner</a>
+    <a href="contact.html">Contact</a>
+    <a href="join.html" class="btn btn-primary">Join Now</a>
+  </div>
+
+  <!-- ══ FULL-SCREEN HERO ══ -->
+  <section class="page-hero" aria-label="Partnership hero">
+    <div class="page-hero-bg" id="page-hero-bg"
+         style="background-image:url('https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=1920&q=85&auto=format&fit=crop');"
+         aria-hidden="true"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+
+    <div class="page-hero-content reveal">
+      <span class="section-label">Grow Together</span>
+      <h1>Partner with <span class="gradient-text">Weekenderly.</span></h1>
+      <p>Reach active weekend explorers who are hungry for new experiences. Let's create something meaningful together.</p>
+      <div class="page-hero-actions">
+        <a href="#partner-types" class="btn btn-primary btn-lg" id="partner-explore-cta">
+          Explore Partnership &rarr;
+        </a>
+        <a href="contact.html" class="btn btn-secondary btn-lg">
+          Talk to Us
+        </a>
+      </div>
+    </div>
+
+    <div class="page-hero-scroll" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+      Scroll
+    </div>
+  </section>
+
+  <main>
+
+    <!-- Partners Intro -->
+    <section class="partners-intro section-padding" id="partner-types" aria-label="Who we partner with">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">Made For</span>
+          <h2 style="margin-top:8px;">The right partners for the right experiences.</h2>
+          <p style="max-width:540px;margin:16px auto 0;">Our community is full of quality-conscious, socially active professionals aged 22–35 who are ready to explore, spend, and remember.</p>
+        </div>
+        <div class="partner-types">
+          <div class="partner-type-card reveal" data-delay="0">
+            <div class="partner-type-icon">☕</div>
+            <h3>Cafés & Restaurants</h3>
+            <p>Host our weekend meetups. Gain consistent footfall from a curated, premium audience who love good coffee and great conversations.</p>
+            <div style="margin-top:20px;"><span class="tag" style="background:rgba(255,122,0,0.1);color:var(--orange);">Weekend Venue Partner</span></div>
+          </div>
+          <div class="partner-type-card reveal" data-delay="150">
+            <div class="partner-type-icon">🎉</div>
+            <h3>Event Organizers</h3>
+            <p>Fill your events with enthusiastic, engaged attendees who are actively looking for things to do. We drive real attendance, not RSVPs.</p>
+            <div style="margin-top:20px;"><span class="tag" style="background:rgba(255,122,0,0.1);color:var(--orange);">Experience Partner</span></div>
+          </div>
+          <div class="partner-type-card reveal" data-delay="300">
+            <div class="partner-type-icon">🏔️</div>
+            <h3>Travel Groups</h3>
+            <p>Connect with professionals who are ready and willing to embark on weekend getaways. Quality travellers who commit to plans.</p>
+            <div style="margin-top:20px;"><span class="tag" style="background:rgba(255,122,0,0.1);color:var(--orange);">Adventure Partner</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="partner-benefits section-padding" aria-label="Partnership benefits">
+      <div class="container">
+        <div class="partner-benefits-grid">
+          <div class="reveal-left">
+            <span class="section-label">Why Partner</span>
+            <h2 style="margin-top:8px;">More than just exposure.</h2>
+            <p style="margin-top:16px;">We don't just mention your brand — we integrate it into real weekend experiences that people remember and talk about.</p>
+            <div class="partner-benefit-list">
+              <div class="partner-benefit-item">
+                <div class="partner-check">✓</div>
+                <div>
+                  <strong style="color:var(--navy);display:block;margin-bottom:4px;">Targeted Audience</strong>
+                  <p style="font-size:0.9rem;">Reach corporate professionals aged 22–35 with disposable income and social intent.</p>
+                </div>
+              </div>
+              <div class="partner-benefit-item">
+                <div class="partner-check">✓</div>
+                <div>
+                  <strong style="color:var(--navy);display:block;margin-bottom:4px;">Real Footfall</strong>
+                  <p style="font-size:0.9rem;">We drive actual people to your venue or event, not just likes and follows.</p>
+                </div>
+              </div>
+              <div class="partner-benefit-item">
+                <div class="partner-check">✓</div>
+                <div>
+                  <strong style="color:var(--navy);display:block;margin-bottom:4px;">Brand Association</strong>
+                  <p style="font-size:0.9rem;">Be seen as a premium lifestyle brand by associating with quality weekend experiences.</p>
+                </div>
+              </div>
+              <div class="partner-benefit-item">
+                <div class="partner-check">✓</div>
+                <div>
+                  <strong style="color:var(--navy);display:block;margin-bottom:4px;">Social Media Amplification</strong>
+                  <p style="font-size:0.9rem;">Our community creates organic content that amplifies your reach authentically.</p>
+                </div>
+              </div>
+              <div class="partner-benefit-item">
+                <div class="partner-check">✓</div>
+                <div>
+                  <strong style="color:var(--navy);display:block;margin-bottom:4px;">Recurring Relationship</strong>
+                  <p style="font-size:0.9rem;">We don't do one-offs. Partnership means ongoing collaboration built on trust.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-right">
+            <img
+              src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=800&q=85&auto=format&fit=crop"
+              alt="Partner café venue"
+              loading="lazy"
+              style="width:100%;height:500px;object-fit:cover;border-radius:var(--radius-xl);filter:brightness(1.15) contrast(1.1) saturate(1.1);box-shadow:var(--card-shadow-hover);"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section-padding" style="background:var(--navy);" aria-label="Our reach">
+      <div class="container">
+        <div class="text-center reveal" style="margin-bottom:52px;">
+          <span class="section-label">Our Reach</span>
+          <h2 style="color:var(--white);margin-top:8px;">Why brands choose us.</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px;" class="stats-grid">
+          <div class="how-card reveal" data-delay="0" style="text-align:center;">
+            <div style="font-size:2.4rem;font-weight:900;font-family:'Poppins',sans-serif;color:var(--orange);">500+</div>
+            <div style="color:var(--white);font-weight:600;margin-top:8px;">Active Members</div>
+            <p style="font-size:0.85rem;margin-top:6px;">And growing every week</p>
+          </div>
+          <div class="how-card reveal" data-delay="100" style="text-align:center;">
+            <div style="font-size:2.4rem;font-weight:900;font-family:'Poppins',sans-serif;color:var(--orange);">12+</div>
+            <div style="color:var(--white);font-weight:600;margin-top:8px;">Cities</div>
+            <p style="font-size:0.85rem;margin-top:6px;">Across India, expanding fast</p>
+          </div>
+          <div class="how-card reveal" data-delay="200" style="text-align:center;">
+            <div style="font-size:2.4rem;font-weight:900;font-family:'Poppins',sans-serif;color:var(--orange);">22–35</div>
+            <div style="color:var(--white);font-weight:600;margin-top:8px;">Age Range</div>
+            <p style="font-size:0.85rem;margin-top:6px;">Prime spending demographic</p>
+          </div>
+          <div class="how-card reveal" data-delay="300" style="text-align:center;">
+            <div style="font-size:2.4rem;font-weight:900;font-family:'Poppins',sans-serif;color:var(--orange);">98%</div>
+            <div style="color:var(--white);font-weight:600;margin-top:8px;">Satisfaction Rate</div>
+            <p style="font-size:0.85rem;margin-top:6px;">Members who come back</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner CTA -->
+    <section class="partner-cta section-padding" aria-label="Partner with us now">
+      <div class="container text-center">
+        <div class="reveal">
+          <span class="section-label" style="color:rgba(255,255,255,0.6);">Let's Talk</span>
+          <h2>Ready to grow together?</h2>
+          <p style="max-width:500px;margin:16px auto 32px;">Reach out and let's explore how Weekenderly can bring the right people to your door.</p>
+          <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary btn-lg" id="partner-contact-cta">Get In Touch</a>
+            <a href="mailto:hello@weekenderly.com" class="btn btn-secondary btn-lg" id="partner-email-cta">Email Us Directly</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+                  <div class="footer-logo">
+          <img src="logo.png" alt="Weekenderly Logo">
+          <span>Weekend<span>erly</span></span>
+        </div>
+          <p>Redefining how working professionals experience life outside of work.</p>
+        </div>
+        <div class="footer-col"><h5>Explore</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="join.html">Join</a></div>
+        <div class="footer-col"><h5>Company</h5><a href="partnership.html">Partnership</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div>
+        <div class="footer-col"><h5>Connect</h5><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a><a href="contact.html">WhatsApp</a><a href="contact.html">Email Us</a></div>
+      </div>
+      <div class="footer-bottom"><p>© 2024 Weekenderly. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <style>
+    @media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr 1fr !important; } }
+    @media (max-width: 480px) { .stats-grid { grid-template-columns: 1fr !important; } }
+  </style>
+</body>
+</html>

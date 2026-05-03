@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekenderly � Your Social Weekend Platform</title>
+  <meta name="keywords" content="meet new people, weekend plans, social app India, things to do weekend, meetups near me">
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="description" content="Weekenderly disclaimer. Weekenderly connects individuals for social experiences. Participation is voluntary and at user discretion." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- Lenis -->
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
+<body>
+<!-- -- Loading Screen -- -->
+<div id="loader">
+  <div id="loader-logo"><img src="logo_white.png" style="height:80px;"></div>
+  <div id="loader-bar"><div id="loader-bar-fill"></div></div>
+</div>
+
+<!-- -- Scroll Progress -- -->
+<div id="scroll-progress"></div>
+
+<!-- -- Custom Cursor -- -->
+<div id="cursor"></div>
+<div id="cursor-dot"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+              <a href="index.html" class="nav-logo" aria-label="Weekenderly home">
+        <img src="logo.png" alt="Weekenderly Logo">
+        <span>Weekend<span>erly</span></span>
+      </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="partnership.html">Partner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="join.html" class="btn btn-primary nav-cta">Join Now</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="partnership.html">Partner</a>
+    <a href="contact.html">Contact</a>
+    <a href="join.html" class="btn btn-primary">Join Now</a>
+  </div>
+
+  <!-- ══ FULL-SCREEN HERO ══ -->
+  <section class="page-hero" aria-label="Disclaimer hero">
+    <div class="page-hero-bg" id="page-hero-bg"
+         style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1920&q=85&auto=format&fit=crop');"
+         aria-hidden="true"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+
+    <div class="page-hero-content">
+      <span class="section-label">Legal</span>
+      <h1>Our <span class="gradient-text">Disclaimer.</span></h1>
+      <p>Last updated: January 2024. Please read this carefully before using our services.</p>
+      <div class="page-hero-actions">
+        <a href="#disclaimer-content" class="btn btn-primary btn-lg" id="disclaimer-read-cta">
+          Read Disclaimer &darr;
+        </a>
+        <a href="contact.html" class="btn btn-secondary btn-lg">
+          Questions? Contact Us
+        </a>
+      </div>
+    </div>
+
+    <div class="page-hero-scroll" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+      Scroll
+    </div>
+  </section>
+
+  <main>
+    <section class="section-padding" style="background:var(--white);" id="disclaimer-content" aria-label="Disclaimer content">
+      <div class="container">
+        <div class="legal-content">
+
+          <div class="legal-section">
+            <h3>1. General</h3>
+            <p>The information provided on the Weekenderly website and platform is for general informational and community-building purposes only. Weekenderly is a social connection platform designed to help individuals discover and participate in weekend experiences.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>2. Voluntary Participation</h3>
+            <p><strong style="color:var(--navy);">Weekenderly connects individuals for social experiences. Participation is entirely voluntary and at the user's own discretion.</strong></p>
+            <p style="margin-top:12px;">By joining and participating in any Weekenderly experience, event, or activity, users acknowledge that they do so of their own free will. Weekenderly does not compel or pressure anyone to attend any specific event or interact with any specific individual.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>3. User Responsibility</h3>
+            <p>Users are solely responsible for their own conduct and decisions when participating in Weekenderly-facilitated activities. This includes but is not limited to:</p>
+            <ul style="margin-top:12px;padding-left:20px;display:flex;flex-direction:column;gap:8px;">
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Personal safety during meetups and events</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Decisions regarding travel, transportation, and accommodations</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Personal financial decisions related to events and activities</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Interactions and relationships formed through the platform</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>4. No Liability</h3>
+            <p>Weekenderly acts solely as a facilitator connecting like-minded individuals. We do not assume liability for:</p>
+            <ul style="margin-top:12px;padding-left:20px;display:flex;flex-direction:column;gap:8px;">
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Any incidents, accidents, or injuries that may occur during community activities</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">The conduct, representations, or actions of other community members</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Any third-party venues, services, or experiences recommended through the platform</li>
+              <li style="color:var(--text-muted);font-family:'Inter',sans-serif;line-height:1.75;">Any financial losses arising from participation in events or activities</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>5. Third-Party Content</h3>
+            <p>Weekenderly may feature content, images, or links from third-party sources for illustrative purposes. We do not endorse, guarantee, or take responsibility for the accuracy or reliability of third-party content. Any references to partner venues, events, or services are provided in good faith but without warranty.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>6. Community Standards</h3>
+            <p>All members are expected to uphold our community values of respect, authenticity, and kindness. Weekenderly reserves the right to remove any member who violates community standards, engages in harmful behaviour, or misrepresents their identity or intentions.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>7. Changes to This Disclaimer</h3>
+            <p>Weekenderly reserves the right to update this disclaimer at any time without prior notice. Continued use of our services constitutes acceptance of any updated terms.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>8. Contact</h3>
+            <p>If you have questions about this disclaimer, please reach out:</p>
+            <div style="margin-top:16px;padding:20px;background:var(--off-white);border-radius:var(--radius-md);border-left:4px solid var(--orange);">
+              <p><strong style="color:var(--navy);">Email:</strong> <a href="mailto:hello@weekenderly.com" style="color:var(--orange);">hello@weekenderly.com</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+                  <div class="footer-logo">
+          <img src="logo.png" alt="Weekenderly Logo">
+          <span>Weekend<span>erly</span></span>
+        </div>
+          <p>Redefining how working professionals experience life outside of work.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="join.html">Join</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="partnership.html">Partnership</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="contact.html">WhatsApp</a>
+          <a href="contact.html">Email Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Weekenderly. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Weekenderly � Find Friends & Weekend Plans</title>
+  <meta name="keywords" content="meet new people, weekend plans, social app India, things to do weekend, meetups near me">
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="description" content="Get in touch with Weekenderly via email, Instagram, or WhatsApp. We'd love to hear from you." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- Lenis -->
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
+<body>
+<!-- -- Loading Screen -- -->
+<div id="loader">
+  <div id="loader-logo"><img src="logo_white.png" style="height:80px;"></div>
+  <div id="loader-bar"><div id="loader-bar-fill"></div></div>
+</div>
+
+<!-- -- Scroll Progress -- -->
+<div id="scroll-progress"></div>
+
+<!-- -- Custom Cursor -- -->
+<div id="cursor"></div>
+<div id="cursor-dot"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+              <a href="index.html" class="nav-logo" aria-label="Weekenderly home">
+        <img src="logo.png" alt="Weekenderly Logo">
+        <span>Weekend<span>erly</span></span>
+      </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="partnership.html">Partner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="join.html" class="btn btn-primary nav-cta">Join Now</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="partnership.html">Partner</a>
+    <a href="contact.html">Contact</a>
+    <a href="join.html" class="btn btn-primary">Join Now</a>
+  </div>
+
+  <!-- ══ FULL-SCREEN HERO ══ -->
+  <section class="page-hero" aria-label="Contact hero">
+    <div class="page-hero-bg" id="page-hero-bg"
+         style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=85&auto=format&fit=crop');"
+         aria-hidden="true"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+
+    <div class="page-hero-content reveal">
+      <span class="section-label">Say Hello</span>
+      <h1>We'd love to <span class="gradient-text">hear from you.</span></h1>
+      <p>Whether you want to join, partner, or just say hi — we're just a message away. We reply within 24 hours.</p>
+      <div class="page-hero-actions">
+        <a href="#contact-section" class="btn btn-primary btn-lg" id="contact-hero-cta">
+          Send a Message &rarr;
+        </a>
+        <a href="https://wa.me/919999999999" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+
+    <div class="page-hero-scroll" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+      Scroll
+    </div>
+  </section>
+
+  <main>
+
+    <!-- Contact Section -->
+    <section class="section-padding" style="background:var(--white);" id="contact-section" aria-label="Contact information and form">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Contact Info -->
+          <div class="reveal-left">
+            <span class="section-label">Reach Us</span>
+            <h2 style="margin-top:8px;margin-bottom:8px;">Let's connect.</h2>
+            <p style="margin-bottom:32px;">We typically respond within 24 hours. Choose the channel that works best for you.</p>
+
+            <a href="mailto:hello@weekenderly.com" class="contact-method" id="contact-email" aria-label="Email us">
+              <div class="contact-method-icon">📧</div>
+              <div class="contact-method-text">
+                <h4>Email</h4>
+                <p>hello@weekenderly.com</p>
+              </div>
+            </a>
+
+            <a href="https://instagram.com/weekenderly" target="_blank" rel="noopener" class="contact-method" id="contact-instagram" aria-label="Follow us on Instagram">
+              <div class="contact-method-icon">📸</div>
+              <div class="contact-method-text">
+                <h4>Instagram</h4>
+                <p>@weekenderly</p>
+              </div>
+            </a>
+
+            <a href="https://wa.me/919999999999" target="_blank" rel="noopener" class="contact-method" id="contact-whatsapp" aria-label="Message us on WhatsApp">
+              <div class="contact-method-icon">💬</div>
+              <div class="contact-method-text">
+                <h4>WhatsApp</h4>
+                <p>+91 99999 99999</p>
+              </div>
+            </a>
+
+            <div style="margin-top:36px;padding:28px;background:var(--off-white);border-radius:var(--radius-lg);">
+              <h4 style="font-family:'Poppins',sans-serif;color:var(--navy);margin-bottom:8px;">Response Time</h4>
+              <p style="font-size:0.9rem;">We reply to all messages within <strong style="color:var(--orange);">24 hours</strong> on weekdays. For urgent queries, WhatsApp is your best bet.</p>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="reveal-right">
+            <div class="contact-form">
+              <h3 style="font-family:'Poppins',sans-serif;color:var(--navy);margin-bottom:8px;">Send us a message</h3>
+              <p style="margin-bottom:28px;font-size:0.9rem;">Fill in the form and we'll get back to you shortly.</p>
+
+              <form id="contact-form" novalidate>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                  <div class="form-group">
+                    <label class="form-label" for="contact-name">Full Name *</label>
+                    <input class="form-input" type="text" id="contact-name" name="name" placeholder="Your name" required autocomplete="name" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="contact-email-input">Email *</label>
+                    <input class="form-input" type="email" id="contact-email-input" name="email" placeholder="you@email.com" required autocomplete="email" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-subject">Subject</label>
+                  <input class="form-input" type="text" id="contact-subject" name="subject" placeholder="What's this about?" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-type">I'm reaching out about</label>
+                  <select class="form-input" id="contact-type" name="type" style="appearance:none;cursor:pointer;">
+                    <option value="">Select one...</option>
+                    <option value="joining">Joining Weekenderly</option>
+                    <option value="partnership">Business Partnership</option>
+                    <option value="feedback">Feedback or Suggestions</option>
+                    <option value="press">Press & Media</option>
+                    <option value="other">Something else</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-message">Message *</label>
+                  <textarea class="form-textarea" id="contact-message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" id="contact-submit">
+                  Send Message &rarr;
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-padding" style="background:var(--off-white);" aria-label="Frequently asked questions">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">FAQ</span>
+          <h2 style="margin-top:8px;">Quick answers.</h2>
+        </div>
+        <div style="max-width:700px;margin:48px auto 0;">
+          <div class="faq-item reveal">
+            <h4 id="faq-q1">Is Weekenderly free to join?</h4>
+            <p>Yes! Early access is completely free. We believe everyone deserves better weekends, so we're keeping it accessible during our launch phase.</p>
+          </div>
+          <div class="faq-item reveal">
+            <h4 id="faq-q2">Which cities are you currently in?</h4>
+            <p>We're currently active in 12+ cities across India and expanding rapidly. Sign up and we'll let you know when we launch in your city.</p>
+          </div>
+          <div class="faq-item reveal">
+            <h4 id="faq-q3">How do partnerships work?</h4>
+            <p>We work on a curated, case-by-case basis with cafés, event organizers, and travel groups. Reach out via our <a href="partnership.html" style="color:var(--orange);font-weight:500;">Partnership page</a> and we'll explore the right collaboration for you.</p>
+          </div>
+          <div class="faq-item reveal">
+            <h4 id="faq-q4">Is my data safe?</h4>
+            <p>Absolutely. We collect only what's necessary and never sell your data. Read our <a href="privacy.html" style="color:var(--orange);font-weight:500;">Privacy Policy</a> for full details.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+                  <div class="footer-logo">
+          <img src="logo.png" alt="Weekenderly Logo">
+          <span>Weekend<span>erly</span></span>
+        </div>
+          <p>Redefining how working professionals experience life outside of work.</p>
+        </div>
+        <div class="footer-col"><h5>Explore</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="join.html">Join</a></div>
+        <div class="footer-col"><h5>Company</h5><a href="partnership.html">Partnership</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div>
+        <div class="footer-col"><h5>Connect</h5><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a><a href="contact.html">WhatsApp</a><a href="contact.html">Email Us</a></div>
+      </div>
+      <div class="footer-bottom"><p>© 2024 Weekenderly. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <style>
+    .faq-item { background: var(--white); border-radius: var(--radius-lg); padding: 24px 28px; margin-bottom: 16px; border-left: 4px solid var(--orange); box-shadow: var(--card-shadow); }
+    .faq-item h4 { font-family: 'Poppins', sans-serif; color: var(--navy); font-size: 1rem; margin-bottom: 8px; }
+    .faq-item p { font-size: 0.95rem; }
+    @media (max-width: 480px) { .contact-form > form > div:first-child { grid-template-columns: 1fr !important; } }
+  </style>
+</body>
+</html>

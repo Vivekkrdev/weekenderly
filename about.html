@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Weekenderly � Our Mission to Redefine Weekends</title>
+  <meta name="keywords" content="meet new people, weekend plans, social app India, things to do weekend, meetups near me">
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="description"
+    content="Weekenderly exists because weekends matter. Discover our story, mission, and vision to redefine how working professionals experience life outside work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- Lenis -->
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
+
+<body>
+  <!-- -- Loading Screen -- -->
+  <div id="loader">
+    <div id="loader-logo"><img src="logo_white.png" style="height:80px;"></div>
+    <div id="loader-bar">
+      <div id="loader-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- -- Scroll Progress -- -->
+  <div id="scroll-progress"></div>
+
+  <!-- -- Custom Cursor -- -->
+  <div id="cursor"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Weekenderly home">
+          <img src="logo.png" alt="Weekenderly Logo">
+          <span>Weekend<span>erly</span></span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="partnership.html">Partner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="join.html" class="btn btn-primary nav-cta">Join Now</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="partnership.html">Partner</a>
+    <a href="contact.html">Contact</a>
+    <a href="join.html" class="btn btn-primary">Join Now</a>
+  </div>
+
+  <!-- ══ FULL-SCREEN HERO ══ -->
+  <section class="page-hero" aria-label="About page hero">
+    <div class="page-hero-bg" id="page-hero-bg"
+      style="background-image:url('https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1920&q=85&auto=format&fit=crop');"
+      aria-hidden="true"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+
+    <div class="page-hero-content reveal">
+      <span class="section-label">Our Story</span>
+      <h1>We believe weekends<br>should feel like a <span class="gradient-text">reward.</span></h1>
+      <p>From a shared frustration to a movement — here's how Weekenderly came to be.</p>
+      <div class="page-hero-actions">
+        <a href="http://bit.ly/4tbn3bK" target="_blank" rel="noopener" class="btn btn-primary btn-lg"
+          id="about-hero-cta">
+          Join Early Access &rarr;
+        </a>
+        <a href="#story" class="btn btn-secondary btn-lg">
+          Read Our Story
+        </a>
+      </div>
+    </div>
+
+    <div class="page-hero-scroll" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+      Scroll
+    </div>
+  </section>
+
+  <main>
+
+    <!-- Story Section -->
+    <section class="about-story section-padding" id="story" aria-label="Our story">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <div class="reveal">
+              <span class="section-label">The Beginning</span>
+              <h2 style="margin-top:8px;">A problem we all felt.</h2>
+              <p style="margin-top:20px;">It started with a simple question: <em>"Why is it so hard to make real plans
+                  on weekends?"</em></p>
+              <p>We were corporate professionals in a big city — surrounded by millions of people, yet somehow spending
+                Friday nights alone, scrolling. We had ambition, energy, and the desire to live more. But the routine
+                had quietly consumed our social lives.</p>
+              <p>The problem wasn't effort. It was infrastructure. There was no easy, trusted way to meet like-minded
+                people and actually do things together.</p>
+              <p>So we built one.</p>
+            </div>
+
+            <div class="reveal" style="margin-top:48px;">
+              <span class="section-label">The Journey</span>
+              <h3 style="margin-top:8px;color:var(--navy);">From idea to community.</h3>
+              <div class="timeline" style="margin-top:32px;">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <h4>The Spark</h4>
+                  <p>A small group of friends started coordinating weekend plans over WhatsApp. It worked. Others wanted
+                    in.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <h4>The Community</h4>
+                  <p>Word spread organically. Professionals from across cities joined. Real friendships formed. Real
+                    plans happened.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <h4>Weekenderly Is Born</h4>
+                  <p>We decided to build something proper. A platform designed from the ground up to make great weekends
+                    effortless.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <h4>Today & Beyond</h4>
+                  <p>500+ early members. 12+ cities. And we're just getting started. Your weekend is waiting.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-vision reveal">
+              <span class="section-label" style="color:var(--orange-light);">Our Vision</span>
+              <h3>"To redefine how working professionals experience life outside work."</h3>
+              <p style="color:rgba(255,255,255,0.7);margin-top:12px;">We envision a world where your weekends are just
+                as intentional, meaningful, and fulfilling as your work week.</p>
+            </div>
+          </div>
+
+          <div class="about-image reveal-right">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=85&auto=format&fit=crop"
+              alt="People enjoying their weekend together" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="about-values section-padding" aria-label="Our values">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label">What We Stand For</span>
+          <h2 style="margin-top:8px;">Built on real values.</h2>
+          <p style="max-width:480px;margin:16px auto 0;">Not just a platform. A philosophy about how life should be
+            lived.</p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card reveal" data-delay="0">
+            <div class="value-icon">🤝</div>
+            <h3>Authenticity</h3>
+            <p>No fake connections. No performative socializing. Just real people showing up for real experiences.</p>
+          </div>
+          <div class="value-card reveal" data-delay="100">
+            <div class="value-icon">✨</div>
+            <h3>Quality Over Quantity</h3>
+            <p>We curate. We don't overwhelm. Every plan on Weekenderly is thoughtfully designed for genuine enjoyment.
+            </p>
+          </div>
+          <div class="value-card reveal" data-delay="200">
+            <div class="value-icon">🌱</div>
+            <h3>Growth</h3>
+            <p>Every weekend is an opportunity to grow — to learn, explore, and become a richer version of yourself.</p>
+          </div>
+          <div class="value-card reveal" data-delay="300">
+            <div class="value-icon">🔒</div>
+            <h3>Trust & Safety</h3>
+            <p>Our community is vetted and values-driven. You'll always feel safe showing up as yourself.</p>
+          </div>
+          <div class="value-card reveal" data-delay="400">
+            <div class="value-icon">🌍</div>
+            <h3>Community First</h3>
+            <p>Everything we build serves the community. Decisions are made with member wellbeing at the center.</p>
+          </div>
+          <div class="value-card reveal" data-delay="500">
+            <div class="value-icon">🎯</div>
+            <h3>Intentional Living</h3>
+            <p>We help you make deliberate choices about how you spend your most precious resource — your time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding" style="background:var(--navy);text-align:center;position:relative;overflow:hidden;"
+      aria-label="Join call to action">
+      <div
+        style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=60') center/cover;opacity:0.08;pointer-events:none;">
+      </div>
+      <div class="container" style="position:relative;z-index:2;">
+        <div class="reveal">
+          <span class="section-label">Be Part of It</span>
+          <h2 style="color:var(--white);margin:12px 0 16px;">Ready to live better weekends?</h2>
+          <p
+            style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">
+            Join our growing community and start making your weekends count.</p>
+          <a href="http://bit.ly/4tbn3bK" target="_blank" rel="noopener" class="btn btn-primary btn-lg" id="about-cta">
+            Join Early Access &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Weekenderly Logo">
+            <span>Weekend<span>erly</span></span>
+          </div>
+          <p>Redefining how working professionals experience life outside of work.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="join.html">Join</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="partnership.html">Partnership</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="contact.html">WhatsApp</a>
+          <a href="contact.html">Email Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Weekenderly. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
